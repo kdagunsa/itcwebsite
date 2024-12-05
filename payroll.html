@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle John Dave Dagunsa - Payroll Manager</title>
+    <link rel="stylesheet" href="payrollstyles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <img src="https://images.squarespace-cdn.com/content/v1/5c76a250a568275dfaf44efb/1551588779642-Y3LUQ5AQGV6IZ65W6DW2/Ateneo-de-Davao-Logo-e1518501546893.png" alt="Ateneo Logo">
+        <h3>Kyle John Dave Dagunsa</h3>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Payroll Manager</h1>
+        
+        <!-- Employee Input Form -->
+        <div class="form-container">
+            <label for="name">Employee's Name:</label>
+            <input id="name" type="text" placeholder="Enter employee's name">
+            
+            <label for="days">Days Worked:</label>
+            <input id="days" type="number" placeholder="Enter days worked" min="1">
+            
+            <label for="rate">Daily Rate (PHP):</label>
+            <input id="rate" type="number" placeholder="Enter daily rate in PHP" min="1">
+
+            <label for="deduction">Deduction Amount (PHP):</label>
+            <input id="deduction" type="number" placeholder="Enter deduction amount" min="0">
+
+            <button onclick="addEmployee()" class="calc-button">Add Employee</button>
+        </div>
+
+        <!-- Payroll Table -->
+        <table id="payroll-table" class="payroll-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Employee Name</th>
+                    <th>Days Worked</th>
+                    <th>Daily Rate</th>
+                    <th>Gross Pay</th>
+                    <th>Deduction Amount</th>
+                    <th>Net Pay</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Back to Home Button -->
+    <button class="back-to-home" onclick="window.location.href='Menu website.html';">Back to Home Page</button>
+
+    <!-- Linking to the external JavaScript file -->
+    <script src="payrolljs.js"></script>
+</body>
+</html>

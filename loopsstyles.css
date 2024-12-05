@@ -1,0 +1,150 @@
+/* General Body Styling */
+body {
+    background-image: url("https://www.finduniversity.ph/_resources/business/7158/addu-735.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Dark overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    z-index: 1; /* Place it behind the content */
+}
+
+/* Header Section */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* Above overlay */
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    max-width: 50px;
+    margin-right: 10px; /* Space between logo and name */
+}
+
+.header h3 {
+    font-size: 1.2em; /* Smaller font size */
+    margin: 0;
+}
+
+/* Main Content */
+.content {
+    position: relative;
+    z-index: 2; /* Above overlay */
+    text-align: center;
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Max width for larger screens */
+    background-color: rgba(0, 0, 63, 0.8); /* Semi-transparent dark blue for readability */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background-color: #0056a2; /* Light blue */
+    border: none;
+    color: #ffffff;
+    margin: 10px auto; /* Center buttons */
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 80%;
+    max-width: 250px; /* Smaller buttons */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #004080; /* Darker blue on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+button:active {
+    transform: scale(0.95); /* Shrink effect on click */
+    background-color: #003a70; /* Darker blue for pressed state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Reduced shadow */
+}
+
+/* Input Styling */
+input[type="number"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 200px;
+    background-color: #002855; /* Darker shade of blue */
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Result Window */
+.result-window {
+    position: relative;
+    margin-top: 20px;
+    z-index: 2; /* Ensure it's above content */
+    background-color: rgba(0, 102, 0, 0.9); /* Dark green background */
+    color: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+.result-window h2 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.result-window p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Back to Home Button */
+.back-to-home {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #0056a2; /* Light blue */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: auto;
+    max-width: 250px; /* Size control */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}

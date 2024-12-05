@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle John Dave Dagunsa - Income Tax Calculator</title>
+    <link rel="stylesheet" href="taxcalcstyles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <img src="https://images.squarespace-cdn.com/content/v1/5c76a250a568275dfaf44efb/1551588779642-Y3LUQ5AQGV6IZ65W6DW2/Ateneo-de-Davao-Logo-e1518501546893.png" alt="Ateneo Logo">
+        <h3>Kyle John Dave Dagunsa</h3>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Income Tax Calculator</h1>
+        
+        <!-- Income Input -->
+        <label for="income">Enter Your Taxable Income:</label>
+        <input id="income" type="number" placeholder="e.g., 500000">
+        
+        <!-- Calculate Button -->
+        <button onclick="calculateTax()">Compute Income Tax</button>
+
+        <!-- Result Display -->
+        <div id="result" class="result"></div>
+    </div>
+
+    <button class="back-to-home" onclick="window.location.href='Menu website.html';">Back to Home Page</button>
+
+    <!-- Linking to the external JavaScript file -->
+    <script src="taxcaljs.js"></script>
+</body>
+</html>

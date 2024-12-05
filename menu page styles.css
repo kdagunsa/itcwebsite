@@ -1,0 +1,154 @@
+/* General Body Styling */
+body {
+    background-image: url("https://www.finduniversity.ph/_resources/business/7158/addu-735.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Dark overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.212); /* Semi-transparent black */
+    z-index: 1; /* Place it behind the content */
+}
+
+/* Header for Name and Logo */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* Above overlay */
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    max-width: 50px;
+    margin-right: 10px; /* Space between logo and name */
+}
+
+.header h1 {
+    font-size: 1.2em; /* Smaller font size */
+    margin: 0;
+}
+
+/* About Section Styling */
+.about-section {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    text-align: right;
+    background-color: rgba(0, 0, 63, 0.8); /* Semi-transparent dark blue */
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.about-section a {
+    display: block;
+    margin: 5px 0;
+    padding: 8px 12px;
+    background-color: #0056a2; /* Light blue */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.about-section a:hover {
+    background-color: #004080; /* Darker blue on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+.about-section a:active {
+    transform: scale(0.95); /* Shrink effect on click */
+    background-color: #003a70; /* Darker blue for pressed state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Reduced shadow */
+}
+
+/* Content Area */
+.content {
+    position: relative;
+    z-index: 2; /* Above overlay */
+    text-align: center;
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Max width for larger screens */
+    margin: auto; /* Center content vertically */
+    background-color: rgba(0, 0, 63, 0.8); /* Semi-transparent dark blue for readability */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Headings */
+h1 {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: #cce7ff; /* Lighter blue for subtitles */
+}
+
+/* Buttons */
+.assignment-button {
+    display: block;
+    padding: 10px 15px;
+    margin: 10px auto; /* Center buttons */
+    background-color: #0056a2; /* Light blue */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    width: 100%;
+    max-width: 250px; /* Smaller buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.assignment-button:hover {
+    background-color: #004080; /* Darker blue on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+.assignment-button:active {
+    transform: scale(0.95); /* Slight shrink effect on click */
+    background-color: #003a70; /* Darker blue for the pressed state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Reduced shadow */
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+    font-size: 0.9em;
+    color: #cccccc;
+}

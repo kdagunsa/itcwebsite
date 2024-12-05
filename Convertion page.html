@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle John Dave Dagunsa - Ateneo de Davao University</title>
+    <link rel="stylesheet" href="convpagestyles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <img src="https://images.squarespace-cdn.com/content/v1/5c76a250a568275dfaf44efb/1551588779642-Y3LUQ5AQGV6IZ65W6DW2/Ateneo-de-Davao-Logo-e1518501546893.png" alt="Ateneo Logo">
+        <h3>Kyle John Dave Dagunsa 4-100</h3>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Conversion Type Buttons -->
+        <button onclick="showSection('fToC')">Fahrenheit to Celsius</button>
+        <button onclick="showSection('cToF')">Celsius to Fahrenheit</button>
+        <button onclick="showSection('mToF')">Meters to Feet</button>
+        <button onclick="showSection('fToM')">Feet to Meters</button>
+
+        <!-- Conversion Sections -->
+        <div id="fToC" class="conversion-section">
+            <h2>Fahrenheit to Celsius</h2>
+            <label for="ftemp">Fahrenheit:</label>
+            <input id="ftemp" type="number" oninput="updateCelsius()">
+            <label>Celsius:</label>
+            <input id="sum" type="number" readonly>
+            <button onclick="clearValues('ftemp', 'sum')">Clear Values</button>
+        </div>
+
+        <div id="cToF" class="conversion-section">
+            <h2>Celsius to Fahrenheit</h2>
+            <label for="ftemp1">Celsius:</label>
+            <input id="ftemp1" type="number" oninput="updateFahrenheit()">
+            <label>Fahrenheit:</label>
+            <input id="sum1" type="number" readonly>
+            <button onclick="clearValues('ftemp1', 'sum1')">Clear Values</button>
+        </div>
+
+        <div id="mToF" class="conversion-section">
+            <h2>Meters to Feet</h2>
+            <label for="meter">Meters:</label>
+            <input id="meter" type="number" oninput="updateFeet()">
+            <label>Feet:</label>
+            <input id="sum2" type="number" readonly>
+            <button onclick="clearValues('meter', 'sum2')">Clear Values</button>
+        </div>
+
+        <div id="fToM" class="conversion-section">
+            <h2>Feet to Meters</h2>
+            <label for="feet">Feet:</label>
+            <input id="feet" type="number" oninput="updateMeters()">
+            <label>Meters:</label>
+            <input id="sum3" type="number" readonly>
+            <button onclick="clearValues('feet', 'sum3')">Clear Values</button>
+        </div>
+    </div>
+
+    <!-- Back to Home Button -->
+    <button class="back-to-home" onclick="window.location.href='Menu website.html';">Back to Home Page</button>
+
+    <script src="convpagejs.js"></script>
+</body>
+</html>

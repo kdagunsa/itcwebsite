@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle John Dave Dagunsa - Loops Assignment</title>
+    <link rel="stylesheet" href="loopsstyles.css">
+    <style>
+        /* Fix the home button to the bottom left */
+        .back-to-home {
+            position: fixed;
+            bottom: 20px;    /* Adjust the space from the bottom */
+            left: 20px;      /* Adjust the space from the left */
+            z-index: 1000;   /* Makes sure the button is on top of other elements */
+            padding: 10px 20px; /* Adds padding to the button for better visibility */
+            background-color: #594caf; /* Button color (same as original) */
+            color: white; /* Button text color */
+            border: none; /* Removes default border */
+            border-radius: 5px; /* Optional: round the corners of the button */
+            font-size: 16px; /* Button text size */
+        }
+
+        /* Optional: add some hover effect for the button */
+        .back-to-home:hover {
+            background-color: #45a049; /* Darker shade on hover */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <img src="https://images.squarespace-cdn.com/content/v1/5c76a250a568275dfaf44efb/1551588779642-Y3LUQ5AQGV6IZ65W6DW2/Ateneo-de-Davao-Logo-e1518501546893.png" alt="Ateneo Logo">
+        <h3>Kyle John Dave Dagunsa</h3>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Factorial, Sum, and Average Calculator</h2>
+        
+        <!-- Input for N -->
+        <label for="number">Enter Number:</label>
+        <input id="number" type="number" placeholder="e.g., 5">
+
+        <!-- Calculation Buttons -->
+        <button onclick="calculateFactorial()">Factorial (While Loop)</button>
+        <button onclick="calculateSum()">Sum (Do While Loop)</button>
+        <button onclick="calculateAverage()">Average (For Loop)</button>
+    </div>
+
+    <!-- Result Window -->
+    <div id="result-window" class="result-window">
+        <h2>Result</h2>
+        <p id="result"></p>
+    </div>
+
+    <!-- Back to Home Button -->
+    <button class="back-to-home" onclick="window.location.href='Menu website.html';">Back to Home Page</button>
+
+    <!-- JavaScript -->
+    <script src="loopsjs.js"></script>
+</body>
+</html>

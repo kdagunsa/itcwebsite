@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle John Dave Dagunsa - Income Tax Calculator</title>
+    <style>
+        /* Background and Overlay */
+        body {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1b/Ateneo_De_Davao_University_%28Roxas_Avenue%2C_Davao_City%3B_08-21-2023%29.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff; /* White text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        /* Dark overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 63, 0.75); /* Dark blue overlay */
+            z-index: 1;
+        }
+
+        /* Content Wrapper */
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Title styles */
+        h1, h2 {
+            color: #ffffff;
+            margin: 10px 0;
+        }
+
+        /* Input and button styles */
+        label, input, select, button {
+            font-size: 1em;
+            color: #ffffff;
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        input[type="number"], select {
+            padding: 8px;
+            width: 100%;
+            background-color: #002855; /* Darker shade of blue */
+            border: none;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #0074D9; /* Light blue */
+            border: none;
+            cursor: pointer;
+            color: #ffffff;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0053a6; /* Slightly darker on hover */
+        }
+
+        /* Result Styles */
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Income Tax Calculator</h1>
+        
+        <!-- Income Input -->
+        <label for="income">Enter Your Annual Income:</label>
+        <input id="income" type="number" placeholder="e.g., 50000">
+        
+        <!-- Filing Status Dropdown -->
+        <label for="status">Select Your Filing Status:</label>
+        <select id="status">
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="head">Head of Household</option>
+        </select>
+
+        <!-- Calculate Button -->
+        <button onclick="calculateTax()">Calculate Tax</button>
+
+        <!-- Result Display -->
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function calculateTax() {
+            // Retrieve user inputs
+            const income = parseFloat(document.getElementById("income").value) || 0;
+            const status = document.getElementById("status").value;
+            let tax = 0;
+
+            // Simplified tax brackets (modify based on actual tax data if needed)
+            if (status === "single") {
+                if (income <= 9875) tax = income * 0.10;
+                else if (income <= 40125) tax = 987.5 + (income - 9875) * 0.12;
+                else if (income <= 85525) tax = 4617.5 + (income - 40125) * 0.22;
+                else tax = 14605.5 + (income - 85525) * 0.24;
+            } else if (status === "married") {
+                if (income <= 19750) tax = income * 0.10;
+                else if (income <= 80250) tax = 1975 + (income - 19750) * 0.12;
+                else if (income <= 171050) tax = 9235 + (income - 80250) * 0.22;
+                else tax = 29211 + (income - 171050) * 0.24;
+            } else if (status === "head") {
+                if (income <= 14100) tax = income * 0.10;
+                else if (income <= 53700) tax = 1410 + (income - 14100) * 0.12;
+                else if (income <= 85500) tax = 6162 + (income - 53700) * 0.22;
+                else tax = 13158 + (income - 85500) * 0.24;
+            }
+
+            // Display the calculated tax
+            document.getElementById("result").textContent = `Your estimated tax is: $${tax.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>

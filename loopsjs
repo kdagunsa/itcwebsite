@@ -1,0 +1,53 @@
+function calculateFactorial() {
+    const n = parseInt(document.getElementById("number").value);
+    if (isNaN(n) || n < 0) {
+        document.getElementById("result").textContent = "Please enter a valid non-negative integer.";
+        return;
+    }
+
+    let factorial = 1;
+    let i = 1;
+
+    while (i <= n) {
+        factorial *= i;
+        i++;
+    }
+
+    document.getElementById("result").textContent = `The factorial of ${n} is: ${factorial}`;
+}
+
+function calculateSum() {
+    const n = parseInt(document.getElementById("number").value);
+    if (isNaN(n) || n < 0) {
+        document.getElementById("result").textContent = "Please enter a valid non-negative integer.";
+        return;
+    }
+
+    let sum = 0;
+    let i = 1;
+
+    do {
+        sum += i;
+        i++;
+    } while (i <= n);
+
+    document.getElementById("result").textContent = `The sum of the first ${n} natural numbers is: ${sum}`;
+}
+
+function calculateAverage() {
+    const n = parseInt(document.getElementById("number").value);
+    if (isNaN(n) || n <= 0) {
+        document.getElementById("result").textContent = "Please enter a valid positive integer.";
+        return;
+    }
+
+    let sum = 0;
+
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+
+    const average = (sum / n).toFixed(2);
+
+    document.getElementById("result").textContent = `The average of the first ${n} natural numbers is: ${average}`;
+}
